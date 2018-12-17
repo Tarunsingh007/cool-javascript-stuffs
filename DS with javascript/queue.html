@@ -1,0 +1,27 @@
+<script type="text/javascript">
+	function queue(){
+		var arr=[];
+		this.enqueue=(data)=>{
+			arr.push(data);
+		}
+		this.dequeue=()=>{
+			arr.shift();
+		}
+		this.show=()=>{
+			console.log(arr);
+		}
+		this.size=()=>{
+			console.log(arr.length);
+		}
+	}
+var x=new queue();
+x.enqueue(455);
+x.enqueue(45);
+x.enqueue(4545);
+x.enqueue(4578);
+x.enqueue(47);
+x.size();
+x.dequeue();
+x.size();
+x.show();
+</script>

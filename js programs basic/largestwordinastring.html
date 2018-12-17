@@ -1,0 +1,32 @@
+<script type="text/javascript">
+	var maxlen=0;
+	var string="a aa aaa aaaa asdasda aa aaasdasa aaaa";
+	var ind=0; var arr=[]; var max=0;
+	for(let i=0; i<=string.length; i++)
+	{
+		if(string[i]==" ")
+		{
+			max=i-ind;
+			ind=i+1;
+			arr.push(max);
+		}
+		if(i==string.length-1)
+		{
+			max=i-ind+1;
+			arr.push(max);
+		}
+		
+	}
+	for(let i=0; i<arr.length; i++)
+	{
+		for(let j=i; j<arr.length; j++)
+		{if(arr[i]>arr[j])
+			maxlen=i;}
+	}
+	var s=string.split(" ");
+	console.log(s[maxlen]);
+
+	// arr.forEach((ele)=>{
+	// 	console.log(ele);
+	// });
+</script>

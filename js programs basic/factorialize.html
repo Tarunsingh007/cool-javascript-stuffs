@@ -1,0 +1,15 @@
+<h1>factorial</h1>
+<p id="p"></p>
+<script type="text/javascript">
+	var ans=document.getElementById('p');
+	function factorial(num)
+	{
+		if(num==1)
+			return 1;
+		else
+			return num*factorial(num-1);
+	}
+	var x=factorial(5);
+	ans.textContent=`factorial of 5 is ${x}`;
+	console.log(x);
+</script>
