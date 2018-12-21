@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>trexBot</title>
+	<style>
+	#score{
+		left-margin:550;
+		top:-200px;
+		text-align:center;
+		font-size: 25px;
+		font-weight: bold;
+	}
+	</style>
+</head>
+<body>
+<canvas id="canvas" width="600" height="200"></canvas>
+<div id="score"></div>
+<script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
+<!-- 
+var cvs=document.getElementById("canvas");
+var ctx = canvas.getContext('2d');
+
+// ctx.fillStyle = "#000";
+// ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+var bot=new Image(10,20);
+var tree=new Image(10,0);
+
+bot.src="./bot.png";
+tree.src="./tree.jpg"; 
+
+var dy=200;
+var trees=[];
+trees[0]={x:cvs.width,y:200};
+function jump(){
+	dy=dy-130;
+	if(dy<70)
+		dy=70;
+}
+function draw(){
+	ctx.drawImage(bot,10,dy,25,50);
+
+	//trees
+	for(let i=0;i<trees.length;i++)
+	{
+		ctx.drawImage(tree,trees[i].x,trees[i].y,25,50);
+		trees[i].x-=3;
+		if(trees[i].x==450)
+		{
+			trees.push({
+				x:Math.floor(Math.random()*tree.width)-tree.width,
+				y:Math.flo
+			});
+		}
+		// console.log(trees[i].x);
+
+	//gameover logic
+	if(bot.width>=trees[i].x && dy>=trees[i].y)
+		console.log(bot.height);
+	}
+
+
+	//gravity
+	dy+=3;
+	if(dy>200)
+		dy=200;
+	//event
+	canvas.addEventListener('click',jump);
+	document.addEventListener('keydown',jump);
+	window.requestAnimationFrame(draw);
+}
+draw();
+ -->
